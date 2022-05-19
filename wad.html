@@ -1,0 +1,164 @@
+<!DOCTYPE html>    
+<html>    
+<head>    
+    <title>Library Registration Form</title>    
+    <style type="text/css">
+body{    
+            font-family: Calibri;    
+        }    
+        input[type="text"] {    
+            width: 250px;    
+        }    
+        input[type="submit"], input[type="reset"] {    
+            width: 77px;    
+            height: 27px;    
+            position: relative;left: 180px;    
+        }    
+        form{    
+            text-align: center;    
+            font-family: Calibri;    
+            font-size: 20px;    
+            border: 3px solid black;    
+            width: 600px;    
+            margin: 20px auto;    
+        }    
+        td {    
+            padding: 10px;    
+        }    
+        td:first-child {    
+            text-align: right;    
+            font-weight: bold;    
+        }    
+        td:last-child {    
+            text-align: left;    
+    
+    </style>    
+<script>    
+        function validate() {    
+            var fname = document.reg_form.fname;    
+            var lname = document.reg_form.lname;    
+            var regno = document.reg_form.regno;    
+            var gender = document.reg_form.gender;    
+            var email = document.reg_form.email;    
+            var mobile = document.reg_form.mobile;    
+            var purchase = document.reg_form.purchase;    
+    
+            if (fname.value.length <= 0) {    
+                alert("Name is required");    
+                fname.focus();    
+                return false;    
+            }    
+            if (lname.value.length <= 0) {    
+                alert("Last Name is required");    
+                lname.focus();    
+                return false;    
+            }    
+            if (regno.value.length <= 0) {    
+                alert("Registration number is required");    
+                regno.focus();    
+                return false;    
+            }    
+            if (gender.value.length <= 0) {    
+                alert("Gender is required");    
+                gender.focus();    
+                return false;    
+            }    
+            if (email.value.length <= 0) {    
+                alert("Email Id is required");    
+                email.focus();    
+                return false;    
+            }    
+            if (mobile.value.length <= 0) {    
+                alert("Mobile number is required");    
+                mobile.focus();    
+                return false;    
+            }    
+            if (purchase.value == "select purchase type") {    
+                alert("Choose one option");    
+                purchase.focus();    
+                return false;    
+            }    
+            return false;    
+        }    
+    </script>    
+</head>    
+<body>    
+    <center><h1>Form Validation using HTML,CSS,JavaScript</h1></center>    
+    <hr>    
+    <form method="" action="" name="reg_form" onsubmit="return validate()">    
+<h2>Registration Form</h2>    
+        <table>    
+            <tr>    
+                <td><label>First Name: </label></td>    
+                <td>    
+                    <input type="text" name="fname" placeholder="First Name">    
+                </td>    
+            </tr>    
+            <tr>    
+                <td><label>Last Name: </label></td>    
+                <td>    
+                    <input type="text" name="lname" placeholder="Last Name">    
+                </td>    
+            </tr>    
+<tr>    
+                <td><label>Registration number: </label></td>    
+                <td>    
+                    <input type="number" size="50" name="regno" placeholder="College Registration Number">    
+                </td>    
+            </tr>    
+            <tr>    
+                <td><label>Gender: </label></td>    
+                <td>    
+                    <input type="radio" name="gender" value="male">Male    
+                    <input type="radio" name="gender" value="femele">Female    
+                </td>    
+            </tr>    
+            <tr>    
+                <td><label>Email Id: </label></td>    
+                <td>    
+                    <input type="text" name="email" placeholder="example@gmail.com">    
+                </td>    
+            </tr>    
+            <tr>    
+                <td><label>Mobile: </label></td>    
+                <td>    
+                    <input type="number" name="mobile">    
+                </td>    
+            </tr>    
+   <tr>    
+            <td><label>Purchase type: </label></td>    
+                <td>    
+                    <select name="purchase">    
+                        <option value="select course">select purchase type</option>    
+                        <option value="Borrow">Borrow</option>    
+                        <option value="Return">Return</option>    
+                        <option value="Renew">Renew</option>    
+                        <option value="Issue">Issue</option>    
+                    </select>    
+                </td>    
+            </tr>
+<tr>
+<td><label for= "books"> book type: </label> </td>
+<td><select id = "book">
+<option value = "Novels">Novels</option>
+<option value = "Scientific">Scientific</option>
+<option value = "Comics">Comics</option>
+<option values = "Technology">Technology</option><td>
+</tr>
+
+<tr>
+
+<td>feedback box </td>
+<td><textarea id = "" name = "text" rows = "4" cols = "50"></textarea></td>
+</tr>
+<tr>
+<td>    
+                    <input type="submit" name="submit" value="Submit">    
+                    <input type="reset" name="reset" value="Reset">    
+                </td> 
+</tr>
+            
+        </table>    
+    </form>    
+</body>    
+</html> 
